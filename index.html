@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV Professionnel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* style.css */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+header {
+    background-color:white;
+    color:black;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: black;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.experience h3 {
+    margin: 0;
+    color: #333;
+}
+
+.experience p {
+    margin: 5px 0 15px 0;
+    font-size: 14px;
+    color: #f6eeee;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode header {
+    color:white;
+    background-color: black;
+}
+
+.dark-mode main {
+    background-color: #222;
+}
+
+.dark-mode h1, .dark-mode h2 {
+    color: white;
+}
+form {
+margin-top: 20px;
+padding: 10px;
+background-color: #f9f9f9;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+label {
+font-weight: bold;
+}
+#email {
+ width: 400px;
+}
+#name {
+ width: 400px;
+}
+#message {
+ width: 600px;
+}
+.dark-mode form{
+    background-color: #121212;
+}
+input, textarea {
+
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+button {
+background-color: #69638e;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+button:hover {
+background-color:#525256;
+}
+.image{
+    height: 100px;width: 100px;
+    border-radius: 50px;
+}
+    </style>
+    <script>
+        // script.js
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.createElement("button");
+    toggleButton.innerText = "Mode Sombre";
+    toggleButton.style.cssText = "position:fixed; top:10px; right:10px; padding:10px; cursor:pointer;";
+    document.body.appendChild(toggleButton);
+
+    toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        toggleButton.innerText = document.body.classList.contains("dark-mode") ? "Mode Clair" : "Mode Sombre";
+    });
+});
+
+    </script>
+</head>
+<body>
+    <header>
+        <h1>ES-SAFI ABDERRAHMAN </h1>
+        <p>Eléve d'ingénieur dans la génie IA et Data Siense</p>
+        <div class="contact-info">
+            <p>Email : abderrahmanessafai133@gmail.com | Téléphone : +212 6 25 29 12 14</p>
+        </div>
+        <img src="WhatsApp Image 2024-09-17 at 16.30.24_b73c4ea6.jpg" class="image">
+    </header>
+
+    <main>
+        <section id="profil">
+            <h2>Profil</h2>
+            <p>Eléve d'ingénieur dans la génie IA et Data Siense à École Nationale Supérieure d'Arts et Métiers (ENSAM-Méknes - المدرسة الوطنية العليا للفنون و المهن ) : passionné par l'IA ,avec une forte expertise en machine learning et en développement front-end et back-end.</p>
+        </section>
+
+        <section id="competences">
+            <h2>Compétences</h2>
+            <ul>
+                <li>JavaScript</li>
+                <li>Html/Css</li>
+                <li>PHP</li>
+                <li>Gestion de bases de données (SQL)</li>
+                <li>R</li>
+                <li>Julia</li>
+                <li>DS</li>
+                <li>Machine Learning</li>
+                <li>Python</li>
+                <li>Scikit-learn</li>
+                <li>Numpy</li>
+                <li>Matplotlib</li>
+                <li>Pandas</li>
+                <li>Seaborn</li>
+            </ul>
+        </section>
+
+        <section id="experiences">
+            <h2>Expériences Professionnelles</h2>
+            <div class="experience">
+                <h3>Eléve d'ingénieur - ENSAM Mekness</h3>
+            </div>
+            <div class="experience">
+                <h3>Data Scientist </h3>
+            </div>
+        </section>
+
+        <section id="formation">
+            <h2>Formation</h2>
+            <ul>
+                <li> Baccalauréat Scientifique : sience physique  -  Lycée Moulay Bouchta  (2022)</li>
+                <li> Diplome D'ingenieur D'etat  -  ENSAM Meknes  (2022 - 2027)</li>
+            </ul>
+        </section>
+
+        <section id="projets">
+            <h2>Projets</h2>
+            <ul>
+                <li><strong>Projet 1 :</strong> bureau d'étude : analyse mecanique </li>
+                <li><strong>Projet 2 :</strong> wed développement front-end</li>
+            </ul>
+            <a href="https://www.linkedin.com/in/abderrahman-es-safi-773739329/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Afeed_index_index%3Bcf0654d0-fb91-46e5-96ec-fc2fff994627">LinkdIn</a>
+        </section>
+    </main>
+    <header>
+        <h2 class="section-title">Contactez-moi</h2>
+        <form action="/submit-form" method="post">
+        <label for="name">Nom :</label><br>
+        <input type="text" id="name" name="name"
+        placeholder="Votre nom" required><br><br>
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email"
+        placeholder="Votre email" required><br><br>
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message" rows="4"
+        cols="50" placeholder="Votre message" required></textarea><br><br>
+        <button type="submit">Envoyer</button>
+        </form>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
