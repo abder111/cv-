@@ -3,227 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV Professionnel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CV - Es-safi Abderrahman</title>
     <style>
-        /* style.css */
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
-    margin: 0;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header {
-    background-color:white;
-    color:black;
-    text-align: center;
-    padding: 20px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            color: #000;
+            background: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-main {
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
+        .cv-container {
+            background: #fff;
+            border: 2px solid #000;
+            padding: 30px;
+            min-height: 90vh;
+        }
 
-h1, h2 {
-    color: black;
-}
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
 
-.contact-info {
-    margin-top: 10px;
-    font-size: 14px;
-}
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
 
-section {
-    margin-bottom: 20px;
-}
+        .title {
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
 
-.experience h3 {
-    margin: 0;
-    color: #333;
-}
+        .contact-info {
+            font-size: 12px;
+            line-height: 1.6;
+        }
 
-.experience p {
-    margin: 5px 0 15px 0;
-    font-size: 14px;
-    color: #f6eeee;
-}
+        .contact-info span {
+            margin: 0 10px;
+        }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+        .objective {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #000;
+            font-size: 13px;
+            line-height: 1.5;
+        }
 
-li {
-    margin: 5px 0;
-}
-/* Dark Mode */
-.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
+        .section {
+            margin-bottom: 25px;
+        }
 
-.dark-mode header {
-    color:white;
-    background-color: black;
-}
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
 
-.dark-mode main {
-    background-color: #222;
-}
+        .two-columns {
+            display: flex;
+            gap: 30px;
+        }
 
-.dark-mode h1, .dark-mode h2 {
-    color: white;
-}
-form {
-margin-top: 20px;
-padding: 10px;
-background-color: #f9f9f9;
-border: 1px solid #ddd;
-border-radius: 5px;
-}
-label {
-font-weight: bold;
-}
-#email {
- width: 400px;
-}
-#name {
- width: 400px;
-}
-#message {
- width: 600px;
-}
-.dark-mode form{
-    background-color: #121212;
-}
-input, textarea {
+        .left-column {
+            flex: 1;
+        }
 
-width: 100%;
-padding: 10px;
-margin-top: 5px;
-margin-bottom: 15px;
-border: 1px solid #ccc;
-border-radius: 3px;
-}
-button {
-background-color: #69638e;
-color: white;
-padding: 10px 15px;
-border: none;
-border-radius: 3px;
-cursor: pointer;
-}
-button:hover {
-background-color:#525256;
-}
-.image{
-    height: 100px;width: 100px;
-    border-radius: 50px;
-}
+        .right-column {
+            flex: 2;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .item-date {
+            float: right;
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        .item-company {
+            font-style: italic;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .item-description {
+            font-size: 13px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .skills-list li:before {
+            content: "• ";
+            font-weight: bold;
+        }
+
+        .languages {
+            font-size: 13px;
+        }
+
+        .language-item {
+            margin-bottom: 8px;
+        }
+
+        .language-level {
+            float: right;
+            font-weight: bold;
+        }
+
+        .project-tech {
+            font-size: 12px;
+            font-style: italic;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 600px) {
+            .two-columns {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .name {
+                font-size: 24px;
+            }
+            
+            .contact-info span {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+        @media print {
+            body {
+                padding: 10px;
+                font-size: 12px;
+            }
+            
+            .cv-container {
+                border: 1px solid #000;
+                padding: 20px;
+                min-height: auto;
+            }
+            
+            .section {
+                margin-bottom: 15px;
+            }
+            
+            .objective {
+                padding: 10px;
+            }
+        }
     </style>
-    <script>
-        // script.js
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.createElement("button");
-    toggleButton.innerText = "Mode Sombre";
-    toggleButton.style.cssText = "position:fixed; top:10px; right:10px; padding:10px; cursor:pointer;";
-    document.body.appendChild(toggleButton);
-
-    toggleButton.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        toggleButton.innerText = document.body.classList.contains("dark-mode") ? "Mode Clair" : "Mode Sombre";
-    });
-});
-
-    </script>
 </head>
 <body>
-    <header>
-        <h1>ES-SAFI ABDERRAHMAN </h1>
-        <p>Eléve d'ingénieur dans la génie IA et Data Sience</p>
-        <div class="contact-info">
-            <p>Email : abderrahmanessafi133@gmail.com | Téléphone : +212 6 25 29 12 14</p>
+    <div class="cv-container">
+        <div class="header">
+            <h1 class="name">Es-safi Abderrahman</h1>
+            <p class="title">Élève Ingénieur en Génie IA et Data Technologies</p>
+            <div class="contact-info">
+                <span>abderrahmanessafi133@gmail.com</span>
+                <span>|</span>
+                <span></span>
+                <span>|</span>
+                <span>Maroc</span>
+                <span>|</span>
+                <span>21 ans</span>
+            </div>
         </div>
-        <img src="WhatsApp Image 2024-09-17 at 16.30.24_b73c4ea6.jpg" class="image">
-    </header>
 
-    <main>
-        <section id="profil">
-            <h2>Profil</h2>
-            <p>Eléve d'ingénieur dans la génie IA et Data Sience à École Nationale Supérieure d'Arts et Métiers (ENSAM-Méknes - المدرسة الوطنية العليا للفنون و المهن ) : passionné par l'IA ,avec une forte expertise en machine learning et en développement front-end et back-end.</p>
-        </section>
+        <div class="objective">
+            <strong></strong>Fort de ma passion pour l'IA et les technologies avancées, je suis motivé par le défi de transformer des idées complexes en solutions concrètes. J'aspire à intégrer des projets innovants où je pourrai conjuguer rigueur scientifique, esprit d’analyse et créativité pour répondre à des problématiques réelles.Fort de ma passion pour l'IA et les technologies avancées, je suis motivé par le défi de transformer des idées complexes en solutions concrètes. J'aspire à intégrer des projets innovants où je pourrai conjuguer rigueur scientifique, esprit d’analyse et créativité pour répondre à des problématiques réelles.
+        </div>
 
-        <section id="competences">
-            <h2>Compétences</h2>
-            <ul>
-                <li>JavaScript</li>
-                <li>Html/Css</li>
-                <li>PHP</li>
-                <li>Gestion de bases de données (SQL)</li>
-                <li>R</li>
-                <li>Julia</li>
-                <li>DS</li>
-                <li>Machine Learning</li>
-                <li>Python</li>
-                <li>Scikit-learn</li>
-                <li>Numpy</li>
-                <li>Matplotlib</li>
-                <li>Pandas</li>
-                <li>Seaborn</li>
-                  <li>Excel</li>
-                  <li>MatLab</li>
-            </ul>
-        </section>
+        <div class="two-columns">
+            <div class="left-column">
+                <div class="section">
+                    <h3 class="section-title">Formation</h3>
+                    <div class="item">
+                        <div class="item-header clearfix">
+                            Diplôme d'Ingénieur d'État
+                            <span class="item-date">2022-2027</span>
+                        </div>
+                        <div class="item-company">ENSAM Meknès</div>
+                        <div class="item-description">
+                            Spécialité : Génie IA et Data Technologies<br>
+                            Formation en Intelligence Artificielle, Data Science, Machine Learning et technologies avancées,L'informatique.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-header clearfix">
+                            Baccalauréat
+                            <span class="item-date">2022</span>
+                        </div>
+                        <div class="item-company">Lycée MY Bouchta</div>
+                    </div>
+                </div>
 
-        <section id="experiences">
-            <h2>Expériences Professionnelles</h2>
-            <div class="experience">
-                <h3>Eléve d'ingénieur - ENSAM Mekness</h3>
+                <div class="section">
+                    <h3 class="section-title">Compétences Techniques</h3>
+                    <div class="item">
+                        <div class="item-header">Logiciels</div>
+                        <ul class="skills-list">
+                            <li>Microsoft Office (Excel, Word, PowerPoint)</li>
+                            <li>Matlab</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">Programmation</div>
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>Java, C++</li>
+                            <li>HTML, CSS</li>
+                            <li>SQL</li>
+                            <li>R, Julia</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">Intelligence Artificielle</div>
+                        <ul class="skills-list">
+                            <li>Machine Learning</li>
+                            <li>Deep Learning</li>
+                            <li>Computer Vision </li>
+                            <li>Natural Language Processing (NLP)</li>
+                            <li>Time Series Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">Data Science</div>
+                        <ul class="skills-list">
+                            <li>Data Extraction</li>
+                            <li>Data Cleaning</li>
+                            <li>Data Annotation</li>
+                            <li>Data Mining</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">Langues</h3>
+                    <div class="languages">
+                        <div class="language-item clearfix">
+                            Arabe
+                            <span class="language-level">Langue maternelle</span>
+                        </div>
+                        <div class="language-item clearfix">
+                            Français
+                            <span class="language-level">Bon niveau</span>
+                        </div>
+                        <div class="language-item clearfix">
+                            Anglais
+                            <span class="language-level">Bon niveau</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="experience">
-              
 
+            <div class="right-column">
+                <div class="section">
+                    <h3 class="section-title">Projets Réalisés</h3>
+                    <div class="item">
+                        <div class="item-header">
+                            Projet 1 : Galerie de Photos Interactive
+                        </div>
+                        <div class="item-description">
+                            Création d'un site web de galerie de photos avec interface interactive permettant la navigation et l'affichage dynamique des images.
+                        </div>
+                        <div class="project-tech">
+                            <strong>Technologies :</strong> HTML, CSS, JavaScript, PHP, SQL
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="item-header">
+                            Projet 2 : Système de Détection et Classification des Défauts Électriques
+                        </div>
+                        <div class="item-description">
+                            Développement d'un système intelligent pour la détection et classification automatique des défauts dans les systèmes électriques triphasés. Intégration d'un chatbot NLP pour l'assistance utilisateur.
+                        </div>
+                        <div class="project-tech">
+                            <strong>Technologies :</strong> Simulink (Simulation du système),Python, Machine Learning, Deep Learning, NLP (Chatbot)
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="item-header">
+                            Projet 3 : Système de Surveillance OSA (On-Shelf Availability)
+                        </div>
+                        <div class="item-description">
+                            Système de surveillance intelligent pour détecter la disponibilité des produits dans les rayons de magasins en temps réel, utilisant la vision par ordinateur et l'apprentissage profond.
+                        </div>
+                        <div class="project-tech">
+                            <strong>Technologies :</strong> Python, YOLO (Détection d'objets), CNN (Classification), Deep Learning, Machine Learning
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">Domaines d'Expertise</h3>
+                    <div class="item-description">
+                        <strong>Intelligence Artificielle :</strong> Développement de solutions IA innovantes utilisant des algorithmes de Machine Learning et Deep Learning pour résoudre des problèmes complexes dans divers domaines.<br><br>
+                        
+                        <strong>Computer Vision :</strong> Expertise en traitement d'images, détection d'objets , classification , et analyse vidéo pour des applications industrielles et commerciales.<br><br>
+                        
+                        <strong>Data Science :</strong> Maîtrise complète du pipeline de données, de l'extraction à la modélisation, en passant par le nettoyage et l'analyse pour extraire des insights pertinents.<br><br>
+                        
+                        <strong>Développement Web :</strong> Création d'applications web complètes avec interfaces utilisateur interactives et bases de données robustes.<br><br>
+                        
+                        <strong>NLP :</strong> Développement de systèmes de traitement du langage naturel et d'assistants conversationnels intelligents.
+                    </div>
+                </div>
             </div>
-        </section>
-
-        <section id="formation">
-            <h2>Formation</h2>
-            <ul>
-                <li> Baccalauréat Scientifique : sience physique  -  Lycée Moulay Bouchta  (2022)</li>
-                <li> Diplome D'ingenieur D'etat  -  ENSAM Meknes  (2022 - 2027)</li>
-            </ul>
-        </section>
-
-        <section id="projets">
-            <h2>Projets</h2>
-            <ul>
-                <li><strong>Projet 1 :</strong> bureau d'étude : analyse mecanique </li>
-                <li><strong>Projet 2 :</strong> wed développement front-end</li>
-            </ul>
-            <a href="https://www.linkedin.com/in/abderrahman-es-safi-773739329/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Afeed_index_index%3Bcf0654d0-fb91-46e5-96ec-fc2fff994627">LinkdIn</a>
-        </section>
-    </main>
-    <header>
-        <h2 class="section-title">Contactez-moi</h2>
-        <form action="/submit-form" method="post">
-        <label for="name">Nom :</label><br>
-        <input type="text" id="name" name="name"
-        placeholder="Votre nom" required><br><br>
-        <label for="email">Email :</label><br>
-        <input type="email" id="email" name="email"
-        placeholder="Votre email" required><br><br>
-        <label for="message">Message :</label><br>
-        <textarea id="message" name="message" rows="4"
-        cols="50" placeholder="Votre message" required></textarea><br><br>
-        <button type="submit">Envoyer</button>
-        </form>
-    </header>
-
-    <script src="script.js"></script>
+        </div>
+    </div>
 </body>
 </html>
